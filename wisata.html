@@ -429,6 +429,310 @@
                 display: none;
             }
         }
+		/* =========================================
+   RESPONSIVE - DESKTOP & MOBILE
+   ========================================= */
+
+/* DEFAULT */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    /* SECTION */
+    .section {
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* CONTENT */
+    .content {
+        left: 25px !important;
+        right: 25px !important;
+        width: auto !important;
+        max-width: none !important;
+        top: 35% !important;
+    }
+
+    /* TITLE */
+    .title {
+        font-size: clamp(45px, 10vw, 70px) !important;
+        line-height: 0.9;
+    }
+
+    /* DESCRIPTION */
+    .description {
+        width: min(300px, 80vw) !important;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* LOCATION */
+    .location {
+        font-size: 13px;
+        max-width: 80vw;
+    }
+
+    /* SLIDER */
+    .slider-container {
+        position: absolute;
+        left: 25px !important;
+        right: 25px !important;
+        bottom: 30px !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+
+    .swiper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        width: 150px !important;
+        height: 210px !important;
+        flex-shrink: 0;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* NAVIGATION */
+    .slider-navigation {
+        margin-top: 12px;
+        gap: 8px;
+    }
+
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* COUNTER */
+    .counter {
+        display: none !important;
+    }
+}
+
+
+/* =========================================
+   HP
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* BODY */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* SECTION */
+    .section {
+        min-height: 100svh;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 100svh;
+        height: auto;
+    }
+
+    /* HEADER */
+    header {
+        height: 65px;
+        padding: 0 18px !important;
+        width: 100%;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    /* LOGO */
+    .logo {
+        font-size: 18px;
+    }
+
+    /* MAIN CONTENT */
+    .content {
+        position: absolute;
+        left: 20px !important;
+        right: 20px !important;
+        top: 25% !important;
+        width: auto !important;
+    }
+
+    /* LOCATION */
+    .location {
+        font-size: 11px;
+        line-height: 1.5;
+        max-width: 90%;
+        margin-bottom: 15px;
+    }
+
+    /* TITLE */
+    .title {
+        font-size: clamp(42px, 15vw, 65px) !important;
+        line-height: 0.85 !important;
+        margin: 0;
+    }
+
+    /* DESCRIPTION */
+    .description {
+        width: 90% !important;
+        max-width: 300px;
+        font-size: 11px;
+        line-height: 1.5;
+        margin-top: 18px;
+    }
+
+    /* BUTTON */
+    .content button,
+    .content a {
+        font-size: 10px;
+        padding: 12px 18px;
+    }
+
+    /* SLIDER */
+    .slider-container {
+        position: absolute;
+        left: 20px !important;
+        right: 0 !important;
+        bottom: 20px !important;
+        width: calc(100% - 20px) !important;
+    }
+
+    .swiper {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        width: 135px !important;
+        height: 185px !important;
+    }
+
+    /* CARD */
+    .card {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* CARD TEXT */
+    .card-content {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .card-number {
+        font-size: 8px;
+        margin-bottom: 3px;
+    }
+
+    .card-title {
+        font-size: 12px;
+        line-height: 1;
+    }
+
+    /* PAGINATION */
+    .swiper-pagination {
+        margin-top: 10px;
+    }
+
+    /* NAVIGATION */
+    .slider-navigation {
+        margin-top: 8px;
+        gap: 6px;
+    }
+
+    .slider-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    /* HIDE COUNTER */
+    .counter {
+        display: none !important;
+    }
+}
+
+
+/* =========================================
+   HP KECIL
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .content {
+        top: 22% !important;
+    }
+
+    .title {
+        font-size: 40px !important;
+    }
+
+    .description {
+        font-size: 10px;
+    }
+
+    .swiper-slide {
+        width: 120px !important;
+        height: 165px !important;
+    }
+
+    .card-title {
+        font-size: 11px;
+    }
+}
 
 	</style>
     <link
