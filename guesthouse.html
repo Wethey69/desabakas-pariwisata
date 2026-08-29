@@ -623,25 +623,21 @@ body {
 
 @media (max-width: 600px) {
 
-    /* BODY */
     body {
         overflow-x: hidden;
     }
 
-    /* SECTION */
     .section {
         min-height: 100svh;
         height: auto;
         margin-bottom: 15px;
     }
 
-    /* HERO */
     .hero {
         min-height: 100svh;
         height: auto;
     }
 
-    /* HEADER */
     header {
         height: 65px;
         padding: 0 18px !important;
@@ -649,13 +645,20 @@ body {
     }
 
     nav {
-        display: none !important;
+        display: flex !important;
+        gap: 8px;
+        align-items: center;
     }
 
-    /* LOGO */
+    nav a {
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
     .logo {
         font-size: 18px;
     }
+}
 
     /* MAIN CONTENT */
     .content {
