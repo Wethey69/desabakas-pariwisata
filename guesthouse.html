@@ -445,148 +445,63 @@
     width: 55%;
     z-index: 5;
 }
-          @media (max-width: 900px) {
+          /* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-            header {
-        padding: 0 15px;
+/* ---------- TABLET ---------- */
+
+@media screen and (max-width: 900px) {
+
+    header {
+        padding: 0 20px;
     }
 
     nav {
         display: flex;
-        gap: 10px;
         align-items: center;
+        gap: 10px;
     }
 
     nav a {
         font-size: 10px;
         white-space: nowrap;
     }
-            .content {
-                left: 25px;
-                top: 42%;
 
-                width: calc(100% - 50px);
-            }
-
-            .title {
-                font-size: 60px;
-            }
-
-            .description {
-                width: 280px;
-            }
-
-            .slider-container {
-                left: 25px;
-                right: 0;
-
-                bottom: 5%;
-
-                width: calc(100% - 25px);
-            }
-
-            .swiper-slide {
-                width: 130px;
-                height: 190px;
-            }
-
-            .counter {
-                display: none;
-            }
-        }
-		/* =========================================
-   RESPONSIVE - DESKTOP & MOBILE
-   ========================================= */
-
-/* DEFAULT */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    width: 100%;
-    margin: 0;
-    overflow-x: hidden;
-}
-		
-
-/* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 900px) {
-
-    /* SECTION */
-    .section {
-        min-height: 100vh;
-        width: 100%;
-        overflow: hidden;
-        margin-bottom: 20px;
-    }
-
-    /* HERO */
-    .hero {
-        min-height: 100vh;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    /* CONTENT */
     .content {
-        left: 25px !important;
-        right: 25px !important;
-        width: auto !important;
-        max-width: none !important;
-        top: 35% !important;
+        left: 25px;
+        top: 35%;
+        width: calc(100% - 50px);
     }
 
-    /* TITLE */
     .title {
-        font-size: clamp(45px, 10vw, 70px) !important;
-        line-height: 0.9;
+        font-size: 60px;
     }
 
-    /* DESCRIPTION */
     .description {
-        width: min(300px, 80vw) !important;
-        font-size: 13px;
-        line-height: 1.5;
+        width: 280px;
     }
 
-    /* LOCATION */
-    .location {
-        font-size: 13px;
-        max-width: 80vw;
-    }
-
-    /* SLIDER */
     .slider-container {
-        position: absolute;
-        left: 25px !important;
-        right: 25px !important;
-        bottom: 30px !important;
-        width: auto !important;
-        max-width: none !important;
+        left: 25px;
+        right: 25px;
+        bottom: 5%;
+        width: auto;
     }
 
     .swiper {
         width: 100%;
-        overflow: hidden;
-    }
-
-    .swiper-wrapper {
-        width: 100%;
     }
 
     .swiper-slide {
-        width: 150px !important;
-        height: 210px !important;
-        flex-shrink: 0;
+        width: 150px;
+        height: 210px;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
     }
 
     .card {
@@ -594,146 +509,183 @@ body {
         height: 100%;
     }
 
-    .card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* NAVIGATION */
-    .slider-navigation {
-        margin-top: 12px;
-        gap: 8px;
-    }
-
-    .slider-btn {
-        width: 35px;
-        height: 35px;
-    }
-
-    /* COUNTER */
     .counter {
-        display: none !important;
+        display: none;
     }
 }
 
 
-/* =========================================
+/* =========================================================
    HP
-   ========================================= */
+   ========================================================= */
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
     body {
+        width: 100%;
         overflow-x: hidden;
     }
 
     .section {
+        width: 100%;
         min-height: 100svh;
         height: auto;
-        margin-bottom: 15px;
     }
 
     .hero {
+        width: 100%;
         min-height: 100svh;
         height: auto;
     }
 
+
+    /* HEADER */
+
     header {
-        height: 65px;
-        padding: 0 18px !important;
         width: 100%;
-    }
+        height: 60px;
+        padding: 0 15px;
 
-    nav {
-        display: flex !important;
-        gap: 8px;
+        display: flex;
         align-items: center;
-    }
-
-    nav a {
-        font-size: 9px;
-        white-space: nowrap;
+        justify-content: space-between;
     }
 
     .logo {
-        font-size: 18px;
+        font-size: 17px;
+        flex-shrink: 0;
     }
 
-    /* MAIN CONTENT */
+    nav {
+        display: flex;
+        align-items: center;
+
+        gap: 6px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        max-width: 75%;
+
+        scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        flex-shrink: 0;
+
+        font-size: 8px;
+
+        white-space: nowrap;
+    }
+
+
+    /* CONTENT */
+
     .content {
         position: absolute;
-        left: 20px !important;
-        right: 20px !important;
-        top: 25% !important;
-        width: auto !important;
+
+        left: 20px;
+        right: 20px;
+
+        top: 25%;
+
+        width: auto;
     }
 
-    /* LOCATION */
     .location {
         font-size: 11px;
+
         line-height: 1.5;
+
         max-width: 90%;
+
         margin-bottom: 15px;
     }
 
-    /* TITLE */
     .title {
-        font-size: clamp(42px, 15vw, 65px) !important;
-        line-height: 0.85 !important;
+        font-size: clamp(42px, 15vw, 65px);
+
+        line-height: 0.85;
+
         margin: 0;
     }
 
-    /* DESCRIPTION */
     .description {
-        width: 90% !important;
+        width: 90%;
+
         max-width: 300px;
+
         font-size: 11px;
+
         line-height: 1.5;
+
         margin-top: 18px;
     }
 
+
     /* BUTTON */
+
     .content button,
     .content a {
         font-size: 10px;
+
         padding: 12px 18px;
     }
 
+
     /* SLIDER */
+
     .slider-container {
         position: absolute;
-        left: 20px !important;
-        right: 0 !important;
-        bottom: 20px !important;
-        width: calc(100% - 20px) !important;
+
+        left: 20px;
+        right: 0;
+
+        bottom: 20px;
+
+        width: calc(100% - 20px);
     }
 
     .swiper {
         width: 100%;
-        overflow: visible;
-    }
 
-    .swiper-slide {
-        width: 135px !important;
-        height: 185px !important;
-    }
-
-    /* CARD */
-    .card {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
         overflow: hidden;
     }
 
-    .card img {
+    .swiper-wrapper {
+        display: flex;
+    }
+
+    .swiper-slide {
+        width: 135px;
+        height: 185px;
+
+        flex-shrink: 0;
+    }
+
+    .swiper-slide img {
         width: 100%;
-        height: 100%;
+        height: 185px;
+
         object-fit: cover;
     }
 
-    /* CARD TEXT */
+
+    /* CARD */
+
+    .card {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+    }
+
     .card-content {
         left: 10px;
         right: 10px;
@@ -750,28 +702,31 @@ body {
         line-height: 1;
     }
 
-    /* PAGINATION */
-    .swiper-pagination {
-        margin-top: 10px;
-    }
 
     /* NAVIGATION */
+
     .slider-navigation {
         margin-top: 8px;
+
         gap: 6px;
     }
 
     .slider-btn {
         width: 32px;
         height: 32px;
+
         font-size: 12px;
     }
 
-    /* HIDE COUNTER */
+
+    /* COUNTER */
+
     .counter {
-        display: none !important;
+        display: none;
     }
 }
+
+
 
 
 	</style>
