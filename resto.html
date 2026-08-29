@@ -937,17 +937,5 @@ const swiper = new Swiper('.swiper', {
     
 });
 </script>
-<script>
-    const currentNumber = 
-            document.querySelector(".counter-current");
 
-        swiper.on("slideChange", function () {
-
-            let number = swiper.realIndex + 1;
-
-            currentNumber.textContent =
-                number.toString().padStart(2, "0");
-
-        });
-</script>
     </body>
